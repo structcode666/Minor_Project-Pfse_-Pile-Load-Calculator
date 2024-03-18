@@ -25,7 +25,7 @@ def create_pile_group(x_coord_acc = [], y_coord_acc = [], no_of_piles = int, pil
     return sec, geom
 
 
-def get_pile_group_properties(sec)-> []:
+def get_pile_group_properties(sec):
 
     pile_group_area = sec.get_area()
     pile_group_ixxc ,pile_group_iyyc, pile_group_ixyc = sec.get_ic()
