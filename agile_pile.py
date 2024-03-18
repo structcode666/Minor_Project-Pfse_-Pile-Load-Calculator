@@ -11,7 +11,7 @@ import agile_pile_calculator as ap
 st.set_page_config(page_title="Agile Pile", layout="wide")
 
 st.header("PILE LOAD CALCULATOR")
-st.write("This application helps visualize the locations of piles under a raft")
+st.write("This application helps visualize the locations of piles under a raft and calculate the loads")
 
 with st.sidebar:
     st.header("PILE INFORMATION")
@@ -21,9 +21,9 @@ st.subheader("Pile Coordinates")
 
 with st.sidebar:
     st.header("LOAD INFORMATION")
-    axial_load = st.text_input("Axial Load", " ")
-    m_xx = st.text_input("Mxx", " ")
-    m_yy = st.text_input("Myy", " ")
+    axial_load = st.text_input("Axial Load (N)", " ")
+    m_xx = st.text_input("Mxx (N.m)", " ")
+    m_yy = st.text_input("Myy (N.m)", " ")
     # m_zz = st.text_input("Mzz", " ")
     # v_x = st.text_input("Vx", " ")
     # v_y = st.text_input("Vy", " ")
