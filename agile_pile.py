@@ -15,24 +15,24 @@ st.write("This application helps visualize the locations of piles under a raft a
 
 with st.sidebar:
     st.header("PILE INFORMATION")
-    no_of_piles = st.text_input("Number of piles under the raft", " ")
+    no_of_piles = st.number_input("Number of piles under the raft", value = "min" , min_value = 0,  format = "%i")
     pile_dia = st.number_input("Pile Diameter (mm)", min_value=0)
 st.subheader("Pile Coordinates")
 
 with st.sidebar:
     st.header("LOAD INFORMATION")
-    axial_load = st.text_input("Axial Load (kN)", " ")
-    m_xx = st.text_input("Mxx (kN.m)", " ")
-    m_yy = st.text_input("Myy (kN.m)", " ")
-    m_zz = st.text_input("Mzz", " ")
-    v_x = st.text_input("Vx", " ")
-    v_y = st.text_input("Vy", " ")
+    axial_load = st.number_input("Axial Load (kN)")
+    m_xx = st.number_input("Mxx (kN.m)")
+    m_yy = st.number_input("Myy (kN.m)")
+    m_zz = st.number_input("Mzz")
+    v_x = st.number_input("Vx")
+    v_y = st.number_input("Vy")
 
 ## Set up Pile Data Table##
 pile_data = []
-for i in range(0, int(no_of_piles)):
-    x = None 
-    y = None
+for i in range(0, no_of_piles):
+    x = 0. 
+    y = 0.
     pile_coord = (f"P{i+1}" , x , y)
     pile_data.append(pile_coord)
 
