@@ -30,10 +30,10 @@ def get_pile_group_properties(sec):
     pile_group_area = sec.get_area()
     pile_group_ixxc ,pile_group_iyyc, pile_group_ixyc = sec.get_ic()
     
-    pile_prop_data = [("Area" , pile_group_area), 
-                      ("Ixx_c", pile_group_ixxc), 
-                      ("Iyy_c", pile_group_iyyc),
-                      ("Izz_c", pile_group_ixxc+pile_group_iyyc),
+    pile_prop_data = [("Area" , round(pile_group_area, 4)), 
+                      ("Ixx_c", round(pile_group_ixxc, 4)), 
+                      ("Iyy_c", round(pile_group_iyyc, 4)),
+                      ("Izz_c", round(pile_group_ixxc+pile_group_iyyc, 4)),
                       ]
     
     return pile_prop_data
